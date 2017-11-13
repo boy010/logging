@@ -2,8 +2,15 @@
 __author__ = 'liu.chunming'  
 import logging  
   
-logging.basicConfig(level=logging.WARNING,  
-                    format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')  
+# logging.basicConfig(level=logging.WARNING,  
+                    # format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')  
+
+logging.basicConfig(level=logging.WARNING,
+                    filename='./log/log.txt',
+                    filemode='w',
+                    format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
+
+
 # use logging  
 logging.info('this is a loggging info message')  
 logging.debug('this is a loggging debug message')  
